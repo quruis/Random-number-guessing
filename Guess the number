@@ -1,0 +1,33 @@
+# import the random number module
+from random import randint
+
+# generate a random number
+num = randint(1, 25)
+randomnumber = str(num)
+
+# Run a loop 5 times
+count = 0
+while (count < 5):
+    count = count + 1 
+    counter = str(count)
+  
+    #Ask user to guess number
+    number=input("Enter your guess: ")
+    print("Guess #" + counter + ": " + number)
+
+    #change the type of the guess to a string
+    num2 = int(number)
+
+    # compare values 
+    if num2 > num:
+        print("Your guess is too high.")
+    elif num2 < num:
+        print("Your guess is too low.")
+    if num2 == num: 
+        print(number + " is correct!")
+        count = 5
+    if (count < 5):
+        print ("Try again!")
+  
+if num2 != num:  
+    print("Your guesses are wrong. The correct answer is " + randomnumber +".")
